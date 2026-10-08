@@ -1,4 +1,4 @@
-/* ---------- Design tokens ---------- */
+/* Design tokens */
 :root {
   /* colour set (light) */
   --bg: #f2f5f3;
@@ -38,7 +38,7 @@ html[data-theme="dark"] {
   --ok: #7ee2a8;
 }
 
-/* ---------- Base ---------- */
+/* Base  */
 *, *::before, *::after { box-sizing: border-box; }
 html { scroll-behavior: smooth; scroll-padding-top: 5rem; }
 body {
@@ -64,31 +64,31 @@ a { color: var(--accent); }
   padding: var(--s1) var(--s2); border-radius: var(--radius); z-index: 20; }
 .skip:focus { top: var(--s1); }
 
-/* ---------- Header / nav (mobile first: stacked) ---------- */
+/*  Header / nav (mobile first: stacked)  */
 .site-header { background: var(--surface); border-bottom: 1px solid var(--line); position: sticky; top: 0; z-index: 10; }
 .header-inner { display: grid; gap: var(--s1); padding-block: var(--s1); }
 .brand { font: 700 var(--fs-lg) var(--font-head); color: var(--fg); text-decoration: none; }
 .nav-list { list-style: none; margin: 0; padding: 0; display: flex; gap: var(--s1); }
-.nav-list a { display: block; padding: var(--s1) var(--s2); color: var(--fg); text-decoration: none; border-radius: var(--radius); font-size: var(--fs-sm); }
+.nav-list a { display: flex; align-items: center; min-height: 44px; padding: 0 var(--s2); color: var(--fg); text-decoration: none; border-radius: var(--radius); font-size: var(--fs-sm); }
 .nav-list a:hover { background: var(--bg); }
 
-/* ---------- Buttons ---------- */
+/* Buttons  */
 .btn { display: inline-block; font: 500 var(--fs-base) var(--font-body); cursor: pointer;
   background: var(--accent); color: var(--on-accent); border: 2px solid var(--accent);
   padding: var(--s1) var(--s3); border-radius: var(--radius); text-decoration: none; }
 .btn:hover { filter: brightness(1.08); }
-.btn-ghost { background: transparent; color: var(--fg); border-color: var(--line); font-size: var(--fs-sm); justify-self: start; }
+.btn-ghost { background: transparent; color: var(--fg); border-color: var(--line); font-size: var(--fs-sm); justify-self: start; min-height: 44px; }
 
-/* ---------- Hero ---------- */
+/* Hero */
 .hero { padding-top: var(--s8); }
-.hero h1 { font-size: var(--fs-2xl); max-width: 18ch; }
+.hero h1 { font-size: var(--fs-xl); max-width: 22ch; }
 
-/* ---------- Projects: 1 column → 3 columns ---------- */
+/* Projects: 1 column → 3 columns  */
 .project-grid { list-style: none; margin: 0; padding: 0; display: grid; gap: var(--s3); }
 .card { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: var(--s3); }
 .card p { color: var(--muted); }
 
-/* ---------- Form ---------- */
+/* Form */
 form { max-width: 36rem; }
 .field { margin-bottom: var(--s3); }
 label { display: block; font-weight: 500; margin-bottom: var(--s1); }
@@ -98,12 +98,12 @@ input[aria-invalid="true"], textarea[aria-invalid="true"] { border-color: var(--
 .error { color: var(--danger); font-size: var(--fs-sm); margin: var(--s1) 0 0; min-height: 1.25rem; }
 .success { color: var(--ok); font-weight: 500; margin-top: var(--s2); }
 
-/* ---------- Footer ---------- */
+/* Footer  */
 .site-footer { border-top: 1px solid var(--line); color: var(--muted); font-size: var(--fs-sm); }
 .site-footer .wrap { padding-block: var(--s3); }
 .site-footer p { margin: 0; }
 
-/* ---------- Desktop layout change ---------- */
+/* Desktop layout change */
 @media (min-width: 768px) {
   h1 { font-size: var(--fs-2xl); }
   .header-inner { grid-template-columns: auto 1fr auto; align-items: center; gap: var(--s4); }
